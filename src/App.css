@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://assets.tiltify.com/uploads/media_type/image/203025/blob-09636982-a21a-494b-bbe4-3692c2720ae3.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px); /* Apply blur effect */
+  z-index: -1; /* Place it behind all content */
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Ensure content is above the blurred background */
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Select Dropdown and Button Container */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #794ca2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #673a97;
+}
+
+/* Joke Display */
+.joke-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px #00000033;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.joke-container h1 {
+  font-size: 1.5rem;
+  color:black;
+  margin: 10px 0;
+}
