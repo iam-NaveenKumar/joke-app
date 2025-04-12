@@ -1,4 +1,5 @@
 import React ,{ useState } from "react";
+import './App.css';
 
 function App() {
   const[category, setCategory] = useState('Any');
@@ -31,7 +32,7 @@ function App() {
         <option value="Christmas">Christmas</option>
       </select>
       <button onClick={getJoke}>Get a Joke</button>
-      <div>
+      <div className="joke-container">
         {
           joke.setup ? <div> <h1>{joke.setup}</h1> <h1>{joke.delivery}</h1> </div> : <h1>{joke}</h1>
         }
